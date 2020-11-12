@@ -3,19 +3,19 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) {
+char *proverb="All that alisters is not gold.";
+void setPointer(char **q)
+{
+	*q = proverb;
+}
+
+int main(void)
+{
+	char *p = "zzz";
+	setPointer(&p);
+	printf("%s \n", p);
+	    
+	    
+    return 0;
 	
-	
-	int i = 10;
-	int *ptr = &i;
-	
-	printf("i = %d, pi : %p\n", i, ptr);
-	(*ptr)++;
-	printf("i = %d, pi : %p\n", i, ptr);
-	*ptr++;
-	printf("i = %d, pi : %p\n", i, ptr);
-	
-	
-		
-	return 0;
 }
